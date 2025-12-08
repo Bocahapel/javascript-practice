@@ -39,42 +39,54 @@ const game = {
   },
 };
 
+//practice 2
+
+for (const [i, players] of game.scored.entries())
+  console.log(`${i + 1} ${players}`);
+
+gameOdd = Object.values(game.odds);
+let average = 0;
+for (const odd of gameOdd) average += odd;
+average /= gameOdd.length;
+console.log(average);
+
+// // practice 1
 const [scored1, scored2] = game.scored;
 console.log(scored1, scored2);
 
-//1
+// //1
 const [players1, players2] = game.players;
 console.log(players1, players2);
 
-//2
+// //2
 const [gk, ...fieldPlayer] = players1;
-console.log(fieldPlayer);
+console.log(gk, fieldPlayer);
 
-//3
-const allPlayers = [...players1, ...players2];
-console.log(allPlayers);
+// //3
+// const allPlayers = [...players1, ...players2];
+// console.log(allPlayers);
 
-//4
-const players1Final = [...players1, "player 1", "player 2", "player 3"];
-console.log(players1Final);
+// //4
+// const players1Final = [...players1, "player 1", "player 2", "player 3"];
+// console.log(players1Final);
 
-//5
-const {
-  odds: { team1, x: draw, team2 },
-} = game;
+// //5
+// const {
+//   odds: { team1, x: draw, team2 },
+// } = game;
 
-console.log(team1, draw, team2);
+// console.log(team1, draw, team2);
 
-const { odds } = game;
-console.log(odds);
+// const { odds } = game;
+// console.log(odds);
 
-const { players } = game;
-console.log(players);
+// const { players } = game;
+// console.log(players);
 
-const printGoal = function (...players) {
-  console.log(`${players.length} goals were scored`);
-};
+// const printGoal = function (...players) {
+//   console.log(`${players.length} goals were scored`);
+// };
 
-printGoal("Neuer");
+// printGoal("Neuer");
 
-printGoal(...game.scored);
+// printGoal(...game.scored);
