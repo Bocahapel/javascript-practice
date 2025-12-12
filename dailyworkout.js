@@ -18,3 +18,11 @@ const isAdult = function (age) {
 };
 
 isAdult("18");
+
+const greet = function (greeting) {
+  console.log(greeting + ", " + this.name);
+};
+
+const user = { name: "Alex" };
+
+greet.call(user, "Hello");
